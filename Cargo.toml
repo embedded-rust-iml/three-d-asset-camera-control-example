@@ -1,0 +1,18 @@
+[package]
+name = "point-cloud-viewer"
+version = "0.1.0"
+authors = ["Fraunhofer IML Embedded Rust Group <embedded-rust@iml.fraunhofer.de>"]
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.16", features = ["macros", "rt-multi-thread"] }
+
+
+# Select appropriate three-d version
+
+# Upstream / crates.io
+#three-d = "0.17"
+# Fork
+three-d = { git = "https://github.com/embedded-rust-iml/three-d", features = ["egui-gui"] }
+# Local Checkout / Development
+#three-d = { path = "../three-d", features = ["egui-gui"] }
